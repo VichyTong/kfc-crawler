@@ -8,6 +8,7 @@ import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Mapper;
 
 public class TokenizerMapper extends Mapper<Object, Text, Text, IntWritable> {
+  job.setJar("WordCount.jar");
 	IntWritable one = new IntWritable(1);
 	Text word = new Text();
 	
