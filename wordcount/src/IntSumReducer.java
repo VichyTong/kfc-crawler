@@ -10,7 +10,6 @@ public class IntSumReducer extends Reducer<Text, IntWritable, Text, IntWritable>
 	IntWritable result = new IntWritable();
 
 	public void reduce(Text	key, Iterable<IntWritable> values, Context context) throws IOException,InterruptedException {
-    job.setJar("WordCount.jar");
 		int sum = 0;
 		for(IntWritable val:values) {
 			sum += val.get();
